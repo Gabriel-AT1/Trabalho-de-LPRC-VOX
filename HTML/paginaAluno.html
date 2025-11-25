@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Aluno</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: "Inter", sans-serif;
+        }
+
+        .navbar {
+            background: white !important;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0.8rem 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            color: #4A4A4A !important;
+        }
+
+        .layout {
+            display: flex;
+            height: 100vh;
+            margin-top: 56px;
+        }
+
+        .barraLateral {
+            width: 250px;
+            background: #ffffff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            background: #fafafa;
+        }
+
+        a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">VOX</a>
+
+            <div class="d-flex align-items-center">
+                <h5 class="m-0">Aluno</h5>
+                <a class="btn btn-danger ms-3" href="login.html">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="layout">
+
+        <!-- Barra lateral -->
+        <aside class="barraLateral col-3 col-md-2 p-0 bg-light border-end min-vh-100">
+            <div class="list-group list-group-flush">
+
+                <a id="btnAtividadesAluno" class="list-group-item list-group-item-action"
+                    onclick="abrirFuncao('atividades')">Atividades</a>
+
+                <a id="btnNotasAluno" class="list-group-item list-group-item-action"
+                    onclick="abrirFuncao('notas')">Notas</a>
+
+                <a id="btnComunicadosAluno" class="list-group-item list-group-item-action"
+                    onclick="abrirFuncao('comunicados')">Comunicados</a>
+            </div>
+        </aside>
+
+
+        <section class="content" id="mainContent">
+        </section>
+
+    </main>
+
+    <script>
+        function abrirFuncao(paginaFuncao) {
+            const content = document.getElementById("mainContent");
+
+            if (paginaFuncao === "atividades") {
+                content.innerHTML = `
+                    <h2>Minhas Atividades</h2>
+                    <p>Aqui você verá todas as atividades disponíveis.</p>
+                    <p>Nenhuma atividade encontrada no momento.</p>`;
+
+                marcarAtivo("btnAtividadesAluno");
+            }
+
+            if (paginaFuncao === "notas") {
+                content.innerHTML = `
+                    <h2>Minhas Notas</h2>
+                    <p>Acompanhe suas notas aqui.</p>
+                    <p>Nenhuma nota registrada ainda.</p>`;
+
+                marcarAtivo("btnNotasAluno");
+            }
+
+            if (paginaFuncao === "comunicados") {
+                content.innerHTML = `
+                    <h2>Comunicados</h2>
+                    <p>Todos os comunicados da escola aparecerão aqui.</p>
+                    <p>Nenhum comunicado novo.</p>`;
+
+                marcarAtivo("btnComunicadosAluno");
+            }
+        }
+
+        function marcarAtivo(botao) {
+            document.getElementById("btnAtividadesAluno").classList.remove("active");
+            document.getElementById("btnNotasAluno").classList.remove("active");
+            document.getElementById("btnComunicadosAluno").classList.remove("active");
+
+            document.getElementById(botao).classList.add("active");
+        }
+
+        window.onload = function () {
+            document.getElementById("btnAtividadesAluno").click();
+        };
+    </script>
+
+</body>
+
+</html>
