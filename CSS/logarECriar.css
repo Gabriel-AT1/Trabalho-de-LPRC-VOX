@@ -1,0 +1,184 @@
+       #bg-video {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           z-index: -1;
+           /*mantem ele sempre atrás de tudo*/
+           filter: brightness(0.75);
+           /*Escurece um pouco o vídeo*/
+           transition: filter 0.3s ease;
+       }
+
+       body {
+           background: #f5f7fa;
+           font-family: "Inter", sans-serif;
+           transition: background 0.3s ease, color 0.3s ease;
+       }
+
+       /* NAVBAR */
+       .navbar {
+           background: white !important;
+           border-bottom: 1px solid #e5e5e5;
+           padding: 0.8rem 1rem;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           z-index: 9999;
+       }
+
+       .navbar-brand {
+           font-weight: 700;
+           font-size: 1.5rem;
+           letter-spacing: 1px;
+           color: #4A4A4A !important;
+       }
+
+       /*Botão do modo escuro*/
+       /* From Uiverse.io by Galahhad */
+       /* switch settings 👇 */
+
+       .ui-switch {
+           /* switch */
+           --switch-bg: rgb(135, 150, 165);
+           --switch-width: 48px;
+           --switch-height: 20px;
+           /* circle */
+           --circle-diameter: 32px;
+           --circle-bg: rgb(0, 56, 146);
+           --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+           padding: 10px;
+       }
+
+       .ui-switch input {
+           display: none;
+       }
+
+       .slider {
+           -webkit-appearance: none;
+           -moz-appearance: none;
+           appearance: none;
+           width: var(--switch-width);
+           height: var(--switch-height);
+           background: var(--switch-bg);
+           border-radius: 999px;
+           position: relative;
+           cursor: pointer;
+       }
+
+       .slider .circle {
+           top: calc(var(--circle-inset) * -1);
+           left: 0;
+           width: var(--circle-diameter);
+           height: var(--circle-diameter);
+           position: absolute;
+           background: var(--circle-bg);
+           border-radius: inherit;
+           background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+           background-repeat: no-repeat;
+           background-position: center center;
+           -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+           -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+           transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+           display: -webkit-box;
+           display: -ms-flexbox;
+           display: flex;
+           -webkit-box-align: center;
+           -ms-flex-align: center;
+           align-items: center;
+           -webkit-box-pack: center;
+           -ms-flex-pack: center;
+           justify-content: center;
+           box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+           ;
+       }
+
+       .slider .circle::before {
+           content: "";
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           background: rgba(255, 255, 255, 0.75);
+           border-radius: inherit;
+           -webkit-transition: all 500ms;
+           -o-transition: all 500ms;
+           transition: all 500ms;
+           opacity: 0;
+       }
+
+       /* actions */
+
+       .ui-switch input:checked+.slider .circle {
+           left: calc(100% - var(--circle-diameter));
+           background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+       }
+
+       .ui-switch input:active+.slider .circle::before {
+           -webkit-transition: 0s;
+           -o-transition: 0s;
+           transition: 0s;
+           opacity: 1;
+           width: 0;
+           height: 0;
+       }
+
+       .login {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           width: 400px;
+           padding: 25px;
+           border-radius: 12px;
+           background: white;
+           box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+       }
+
+       /* -------- MODO ESCURO -------- */
+       body.dark-mode {
+           color: #e6e6e6 !important;
+       }
+
+       body.dark-mode .navbar {
+           background: rgba(10, 10, 10, 0.85) !important;
+           border-bottom: 1px solid #222 !important;
+       }
+
+       body.dark-mode .navbar-brand,
+       body.dark-mode label {
+           color: #e6e6e6 !important;
+       }
+
+       body.dark-mode .login {
+           background-color: #222;
+       }
+
+       body.dark-mode input,
+       body.dark-mode select {
+           background: #444;
+           color: #fff;
+           border: 1px solid #666;
+       }
+
+       body.dark-mode input:hover,
+       body.dark-mode select:hover {
+           background: #4d4d4d;
+       }
+
+       body.dark-mode input:focus,
+       body.dark-mode select:focus {
+           background: #555 !important;
+           border-color: #888;
+           box-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+           outline: none;
+           color: #fff;
+       }
+
+
+       body.dark-mode #bg-video {
+           filter: brightness(0.25) !important;
+       }
